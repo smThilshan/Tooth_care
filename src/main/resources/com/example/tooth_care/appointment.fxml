@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.DatePicker?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.tooth_care.AppointmentController">
+    <HBox spacing="10">
+        <Label text="Filter by ID:" />
+        <TextField fx:id="idFilterTextField" />
+    </HBox>
+    <HBox spacing="10">
+        <Label text="Filter by Date:" />
+        <DatePicker fx:id="dateFilterDatePicker" />
+    </HBox>
+
+    <TableView fx:id="appointmentsTable">
+        <columns>
+            <TableColumn text="ID" fx:id="idColumn"/>
+            <TableColumn text="Patient Name" fx:id="patientNameColumn"/>
+            <TableColumn text="Date" fx:id="dateColumn"/>
+            <TableColumn text="Treatment Charge" fx:id="chargeColumn" />
+        </columns>
+    </TableView>
+    <VBox>
+        <Button fx:id="acceptPaymentButton" text="Accept Payment" onAction="#handleAcceptPayment" />
+        <Button text="Edit Appointment" onAction="#editAppointment" />
+    </VBox>
+
+
+</VBox>

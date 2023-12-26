@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+
+
+    <VBox xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="com.example.tooth_care.InvoiceController"
+          prefWidth="400" prefHeight="300"
+          alignment="CENTER" spacing="10">
+
+        <Label text="Invoice Details" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+        <VBox spacing="5">
+            <Label fx:id="idLabel" />
+            <Label fx:id="patientNameLabel" />
+            <Label fx:id="dateLabel" />
+            <Label fx:id="treatmentLabel" />
+            <Label fx:id="chargeLabel" />
+        </VBox>
+
+    </VBox>
+

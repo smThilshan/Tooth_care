@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.tooth_care.NewAppointmentController"
+      spacing="10"
+      alignment="CENTER">
+
+    <Label text="Create Appointment" />
+    <HBox>
+        <Label text="ID" />
+        <TextField fx:id="idField"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <Label text="Select Patient:" />
+        <ComboBox fx:id="patientComboBox" promptText="Select Patient" />
+    </HBox>
+
+    <HBox spacing="10">
+        <Label text="Date:" />
+        <DatePicker fx:id="datePicker" />
+    </HBox>
+
+    <HBox spacing="10">
+        <Label text="Select Time:" />
+        <ComboBox fx:id="timeComboBox" />
+    </HBox>
+
+    <HBox spacing="10">
+        <Label text="Appointment Types:" />
+        <VBox>
+            <CheckBox text="Cleaning" fx:id="cleaningBox" />
+            <CheckBox text="Whitening" fx:id="whiteningBox" />
+            <CheckBox text="Filling" fx:id="fillingBox" />
+            <CheckBox text="Nerve Filling" fx:id="nerveFilingBox" />
+            <CheckBox text="Root Canal Therapy" fx:id="rootCanalTherapyBox" />
+        </VBox>
+    </HBox>
+    <HBox spacing="10">
+        <Label text="Treatment Cost:" />
+        <ListView fx:id="selectedTypesListView" />
+    </HBox>
+    <HBox>
+        <Label text="Total Cost:   " />
+        <TextField fx:id="totalCostField" editable="false"/>
+    </HBox>
+    <Button text="Create Appointment" onAction="#handleCreateAppointment" />
+</VBox>
